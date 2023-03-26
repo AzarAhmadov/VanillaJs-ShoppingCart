@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: sans-serif;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background: #ECF0F1;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+header .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+header .container .h-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .container .h-row .count {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  background: orange;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  color: #000;
+  font-weight: bold;
+}
+header .container .h-row .logo {
+  font-size: 37px;
+  color: #000;
+}
+header .container .h-row svg {
+  width: 50px;
+  color: #000;
+  cursor: pointer;
+}
+
+main #product {
+  margin: 30px 0;
+}
+main #product .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+main #product .container .p-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main #product .container .p-row .p-item {
+  flex-basis: 240px;
+  flex-grow: 1;
+  border: 2px solid rgba(52, 73, 94, 0.2);
+  border-radius: 10px;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main #product .container .p-row .p-item .product-title {
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+main #product .container .p-row .p-item .price {
+  padding-bottom: 10px;
+  font-size: 23px;
+  color: #E74C3C;
+  font-weight: bold;
+}
+main #product .container .p-row .p-item .addCart {
+  width: 100%;
+  background: #E74C3C;
+  border: none;
+  padding: 10px 0;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 300ms all;
+}
+main #product .container .p-row .p-item .addCart:hover {
+  transform: scale(1.1);
+}
+main #product .container .p-row .p-item img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main #cartDisplay {
+  height: 100%;
+  width: 500px;
+  position: fixed;
+  bottom: 0;
+  left: -100%;
+  background: #F0F3F4;
+  padding-top: 20px;
+  z-index: 10;
+}
+main #cartDisplay.cartDisplay {
+  transition: 400ms all;
+}
+main #cartDisplay.cartDisplay.active {
+  left: 0;
+}
+main #cartDisplay .close-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+main #cartDisplay .close-btn svg {
+  background: #F0F3F4;
+  border-radius: 10px;
+  width: 55px;
+}
+main #cartDisplay .empty {
+  text-align: center;
+  font-size: 25px;
+}
+main #cartDisplay .total {
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  position: absolute;
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+main #cartDisplay .total span {
+  font-size: 24px;
+  font-weight: bold;
+}
+main #cartDisplay .cart-area {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90%;
+  overflow: auto;
+}
+main #cartDisplay .cart-area .cart-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+main #cartDisplay .cart-area .cart-flex:last-child {
+  border-bottom: none;
+}
+main #cartDisplay .cart-area .cart-flex div {
+  width: -moz-max-content;
+  width: max-content;
+  flex-direction: column;
+  display: flex;
+  margin-left: 20px;
+  width: 100%;
+}
+main #cartDisplay .cart-area .cart-flex div p {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+main #cartDisplay .cart-area .cart-flex div span {
+  color: #E74C3C;
+  font-size: 20px;
+}
+main #cartDisplay .cart-area .cart-flex .delete {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+}
+main #cartDisplay .cart-area .cart-flex .delete svg {
+  width: 35px;
+  color: red;
+}
+main #cartDisplay .cart-area .cart-flex img {
+  width: 90px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media only screen and (max-width: 578px) {
+  header .container .h-row .logo {
+    font-size: 35px;
+  }
+  main #cartDisplay {
+    width: 100%;
+    padding-top: 30px;
+  }
+}/*# sourceMappingURL=app.css.map */
